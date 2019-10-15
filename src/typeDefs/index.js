@@ -1,26 +1,14 @@
 'use strict'
 
-//import { mergeTypes } from 'merge-graphql-schemas';
-//import courseType from './courseType'
+import { mergeTypes } from 'merge-graphql-schemas';
+import courseType from './courseType'
+import personType from './personType'
 
 
-const typeDefs =  `
-type Course {
-    uuid_course: ID!
-    title: String!
-    teacher: String
-    description: String!
-    topic: String @deprecated
-}
+const typeDefs = [
+    courseType,
+    personType,
+  ];
 
-type Query {
-    "Return all courses"
-    getCourses: [Course]
-    "Return a course"
-    getCourse(uuid_course: ID!): Course
-}
-`
+export default mergeTypes(typeDefs);
 
-module.exports = {
-    typeDefs    
-}

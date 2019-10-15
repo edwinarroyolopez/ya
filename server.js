@@ -18,7 +18,7 @@ const app = express()
 const port = process.env.port || 3000
 
 const resolvers = require('./src/resolvers')
-const { typeDefs } = require('./src/typeDefs/')
+import  typeDefs  from './src/typeDefs/'
 
 const schema = makeExecutableSchema({ typeDefs, resolvers })
 

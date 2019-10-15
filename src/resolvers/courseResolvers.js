@@ -1,6 +1,8 @@
 'use strict'
 
-const { getCourses } = require('../models/courseModel')
+const { 
+    getCourses 
+} = require('../models/courseModel')
 
 const queries = { 
     getCourses:  async () =>{
