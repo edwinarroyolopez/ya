@@ -1,10 +1,4 @@
-'use strict'
-
-//import { mergeTypes } from 'merge-graphql-schemas';
-//import courseType from './courseType'
-
-
-const typeDefs =  `
+export default  `
 type Course {
     uuid_course: ID!
     title: String!
@@ -20,7 +14,3 @@ type Query {
     getCourse(uuid_course: ID!): Course
 }
 `
-
-module.exports = {
-    typeDefs    
-}

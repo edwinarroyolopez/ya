@@ -1,8 +1,14 @@
 {
   "name": "ya",
   "version": "1.0.0",
-  "description": "1. npm i express express-graphql graphql-tools cors --save 2.",
+  "description": "",
   "main": "server.js",
+  "scripts": {
+    "start": " NODE_ENV=production node index",
+    "dev": "nodemon server.js --exec babel-node --presets babel-preset-env, graphql server.js --exec babel-node --presets babel-preset-env",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
@@ -11,18 +17,17 @@
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "graphql-tools": "^4.0.5",
+    "merge-graphql-schemas": "^1.7.0",
     "pg": "^7.12.1",
     "typescript": "^3.6.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^1.19.3",
     "standard": "^14.3.1"
-  },
-  "scripts": {
-    "start": " NODE_ENV=production node index",
-    "dev": "nodemon -e js, graphql index",
-    "lint": "standard",
-    "lint-fix": "standard --fix"
   },
   "keywords": [],
   "author": "",

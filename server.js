@@ -1,6 +1,10 @@
-'use strict'
+
 
 require('dotenv').config() /* create my environments vars */
+
+import test from './test'
+
+console.log('test',test)
 
 const express = require('express')
 

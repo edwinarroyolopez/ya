@@ -4,7 +4,8 @@
 1. npm init -y
 2. npm i express express-graphql graphql graphql-tag graphql-tools cors pg dotenv --save
 3. npm i nodemon standard -D  
-4. npm i babel-cli babel-preset-es2015 -g
+4. npm install @babel/core @babel/node --save-dev
+5. .babelrc
 
 
 -- modular
@@ -26,3 +27,16 @@ https://medium.com/@choudlet/how-to-combine-graphql-type-definitions-quickly-and
 
 ** interesting
 https://www.apollographql.com/docs/graphql-tools/generate-schema/
+
+
+## BABEL CONFIGURATION
+
+1. npm install babel-cli babel-preset-env babel-loader babel-core --save-dev
+2. npm install nodemon --save-dev
+3. "scripts": {
+    "start": "nodemon index.js --exec babel-node --presets babel-preset-env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+  
+# source: 
+https://medium.com/developer-circles-lusaka/how-to-setup-express-js-server-with-nodemon-and-babel-c3a17218c282
