@@ -9,6 +9,9 @@
 
 -- modular
 
+** 
+https://www.pika.dev/npm/@jokio/merge-graphql-schemas
+
 ** estructures
 https://github.com/betaflag/graphql-server-scaffolding
 
