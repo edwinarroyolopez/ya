@@ -2,25 +2,28 @@
 
 require('dotenv').config() /* create my environments vars */
 
-import test from './test'
-
-console.log('test',test)
-
 const express = require('express')
 
 const { makeExecutableSchema } = require('graphql-tools')
 const gqlMiddleware = require('express-graphql')
 
-const { readFileSync } = require('fs')
-const { join } = require('path')
 
 const app = express()
 const port = process.env.port || 3000
 
-const resolvers = require('./src/resolvers')
+//const resolvers = require('./src/resolvers')
+import resolvers from './src/resolvers'
 import  typeDefs  from './src/typeDefs/'
 
-const schema = makeExecutableSchema({ typeDefs, resolvers })
+const schema =   makeExecutableSchema({
+   typeDefs, 
+   resolvers,
+  /* resolverValidationOptions :{
+    requireResolversForResolveType: false
+  } */
+})
+
+console.log('after... makeExecutableSchema')
 
 app.use('/api', gqlMiddleware({
     schema: schema,

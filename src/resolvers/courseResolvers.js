@@ -1,15 +1,12 @@
 'use strict'
 
-const { 
-    getCourses 
-} = require('../models/courseModel')
+const { getCourses } = require('../models/courseModel')
 
-const queries = { 
-    getCourses:  async () =>{
-       return await getCourses()
-    } 
-}
-
-export default {
-    Query: queries
+module.exports = {
+    /* queries */
+    Query: {
+        getCourses:  async () =>{
+            return await getCourses()
+         } 
+    }
 }
