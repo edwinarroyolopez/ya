@@ -25,6 +25,8 @@ export default `
         getPeople: [Person]
         "Return a student"
         getPerson(uuid_student: ID!): Person
+        "Execute a global search"
+        searchItems(keywords: String!): [GlobalSearch]
     }
 
     input PersonInput {
